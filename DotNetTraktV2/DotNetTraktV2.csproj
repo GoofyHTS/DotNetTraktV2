@@ -10,9 +10,19 @@
     <AssemblyName>DotNetTraktV2</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -21,6 +31,7 @@
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -34,6 +45,9 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -44,8 +58,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TraktApiUtil.cs" />
+    <Compile Include="TraktApiV2.cs" />
+    <Compile Include="Trakt\Authentication\Token\ExchangeCodeForAccessTokenRequest.cs" />
+    <Compile Include="Trakt\Authentication\Token\ExchangeCodeForAccessTokenResponse.cs" />
+    <Compile Include="Trakt\Authentication\Token\ExchangeRefreshTokenForAccessTokenRequest.cs" />
+    <Compile Include="Trakt\Authentication\Token\ExchangeRefreshTokenForAccessTokenResponse.cs" />
+    <Compile Include="Trakt\Calendars\GetShows\Episode.cs" />
+    <Compile Include="Trakt\Calendars\GetShows\GetShows.cs" />
+    <Compile Include="Trakt\Calendars\GetShows\Ids.cs" />
+    <Compile Include="Trakt\Calendars\GetShows\Show.cs" />
+    <Compile Include="Trakt\Calendars\GetShows\ShowIds.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Trakt" />
+    <Folder Include="Trakt\Authentication" />
+    <Folder Include="Trakt\Authentication\Token" />
+    <Folder Include="Trakt\Calendars" />
+    <Folder Include="Trakt\Calendars\GetShows" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
