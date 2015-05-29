@@ -19,7 +19,7 @@ namespace Trakt.Api.V2.Trakt.Calendars.GetShows
     	public int tvdb { get; set; }
     	public string imdb { get; set; }
     	public int tmdb { get; set; }
-    	public object tvrage { get; set; }
+    	public int tvrage { get; set; }
 		
 		public Ids()
 		{

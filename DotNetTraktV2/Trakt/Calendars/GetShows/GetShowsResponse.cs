@@ -12,15 +12,15 @@ using Trakt.Api.V2.Trakt.Calendars.GetShows;
 namespace Trakt.Api.V2.Trakt.Calendars.GetShows
 {
 	/// <summary>
-	/// Description of GetNewShows.
+	/// Description of GetNewShowsResponse.
 	/// </summary>
-	public class GetShows
+	public class GetShowsResponse
 	{
 		public string first_aired { get; set; }
     	public Episode episode { get; set; }
     	public Show show { get; set; }
 		
-		public GetShows()
+		public GetShowsResponse()
 		{
 		}
 	}

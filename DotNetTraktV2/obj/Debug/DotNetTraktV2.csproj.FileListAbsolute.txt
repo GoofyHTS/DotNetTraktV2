@@ -5,3 +5,5 @@ C:\Users\Goofy\Documents\SharpDevelop Projects\DotNetTraktV2\DotNetTraktV2\bin\D
 C:\Users\Goofy\Documents\SharpDevelop Projects\DotNetTraktV2\DotNetTraktV2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Goofy\Documents\SharpDevelop Projects\DotNetTraktV2\DotNetTraktV2\obj\Debug\DotNetTraktV2.dll
 C:\Users\Goofy\Documents\SharpDevelop Projects\DotNetTraktV2\DotNetTraktV2\obj\Debug\DotNetTraktV2.pdb
+C:\Users\Goofy\Documents\SharpDevelop Projects\DotNetTraktV2\DotNetTraktV2\bin\Debug\KitsuneDotNet.dll
+C:\Users\Goofy\Documents\SharpDevelop Projects\DotNetTraktV2\DotNetTraktV2\bin\Debug\KitsuneDotNet.pdb

@@ -42,6 +42,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KitsuneDotNet">
+      <HintPath>..\..\KitsuneDotNet\KitsuneDotNet\bin\Debug\KitsuneDotNet.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -59,17 +62,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TraktApiUtil.cs" />
-    <Compile Include="TraktApiV2.cs" />
     <Compile Include="Trakt\Authentication\Token\ExchangeCodeForAccessTokenRequest.cs" />
     <Compile Include="Trakt\Authentication\Token\ExchangeCodeForAccessTokenResponse.cs" />
     <Compile Include="Trakt\Authentication\Token\ExchangeRefreshTokenForAccessTokenRequest.cs" />
     <Compile Include="Trakt\Authentication\Token\ExchangeRefreshTokenForAccessTokenResponse.cs" />
     <Compile Include="Trakt\Calendars\GetShows\Episode.cs" />
-    <Compile Include="Trakt\Calendars\GetShows\GetShows.cs" />
+    <Compile Include="Trakt\Calendars\GetShows\GetShowsResponse.cs" />
     <Compile Include="Trakt\Calendars\GetShows\Ids.cs" />
     <Compile Include="Trakt\Calendars\GetShows\Show.cs" />
     <Compile Include="Trakt\Calendars\GetShows\ShowIds.cs" />
+    <Compile Include="Trakt\TraktV2Api.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Trakt" />
